@@ -6,13 +6,13 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 14:04:38 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/24 16:02:29 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/03/25 23:48:59 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/// @brief This function compares the values of two pointers
+/// @brief compares the values of two pointers
 /// @param s1 first pointer to compare
 /// @param s2 second pointer to compare
 /// @param n bytes to compare

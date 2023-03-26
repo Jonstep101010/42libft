@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 16:12:18 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/24 18:45:04 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/03/26 01:39:49 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
-
-/*if (((biglength - 1) < (littlelength - 1)) || (littlelength > len))
-//equal signs suck
-	return (NULL);*/
-
-// !name[x] == name[x] == '\0';

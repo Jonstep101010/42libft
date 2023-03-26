@@ -6,13 +6,15 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 12:38:44 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/19 14:40:40 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/03/26 01:46:25 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <ctype.h>
-#include <stdio.h>*/
+#include "libft.h"
 
+/// @brief converts ascii alphabet values to uppercase
+/// @param ch value of character
+/// @return value, whether modified or not
 int	ft_toupper(int ch)
 {
 	if ((ch > 96) && (ch < 123))

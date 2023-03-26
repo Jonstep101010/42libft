@@ -6,12 +6,17 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 13:00:03 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/21 16:01:14 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/03/26 00:16:44 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/// @brief sets first n bytes of str to value c (unsigned int)
+/// @param str location to modify
+/// @param c value to set n bytes to
+/// @param n bytes to set to value c
+/// @return value of str
 void	*ft_memset(void *str, int c, size_t n)
 {
 	size_t			i;

@@ -6,10 +6,13 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 19:01:31 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/19 14:40:10 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/03/26 00:00:05 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/// @brief checks if given value is alphabetic
+/// @param c value of input character
+/// @return 1 if true, 0 if not
 int	ft_isalpha(int c)
 {
 	if ((c > 64) && (c < 91))

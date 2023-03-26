@@ -13,6 +13,9 @@
 /*#include <stdio.h>
 #include <ctype.h> */
 
+/// @brief checks if given value is alphanumeric
+/// @param c value of input character
+/// @return 1 if true, 0 if not
 int	ft_isalnum(int c)
 {
 	if ((c > 64) && (c < 91))

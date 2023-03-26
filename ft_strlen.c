@@ -6,14 +6,15 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 17:21:56 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/23 12:47:23 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/03/26 01:38:51 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//i includes the termination character
-
+/// @brief length of a given string including termination character
+/// @param str to look at
+/// @return length (including \0)
 size_t	ft_strlen(const char *str)
 {
 	size_t	i;

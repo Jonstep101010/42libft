@@ -6,18 +6,19 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 18:47:55 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/20 20:27:19 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/03/26 01:35:29 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//copy src to dst of size
-//at most copy size-1
-//terminates unless size == 0
-//return length of src
-//if return greater size, terminate dst
-
+/// @brief copy src to dst of size
+/// @param dst pointer to string
+/// @param src pointer to string
+/// @param size size of destination buffer
+/// @return length of src, if return > size, terminate dst
+/// @details at most copy size-1
+/// \details terminates unless size == 0
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;

@@ -6,17 +6,17 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 14:51:00 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/23 16:00:23 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/03/26 00:19:38 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//searches string for first occurrence of char 'c'
-//includes termination char
-//returns pointer to char if found
-//returns NULL if not
-
 #include "libft.h"
 
+/// @brief search string for character (starts with first)
+/// @param str string to search
+/// @param c character to find
+/// @return pointer to char c (if found), otherwise 0
+/// @details includes termination character in search
 char	*ft_strchr(const char *str, int c)
 {
 	char	*ptr;
