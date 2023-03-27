@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:52 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/25 22:12:40 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/03/27 12:16:39 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int			ft_toupper(int ch);
 int			ft_tolower(int ch);
 size_t		ft_strlen(const char *str);
 size_t		ft_strlcpy(char *dst, const char *src, size_t size);
-size_t		strlcpytest(char *dst, const char *src, size_t size);
 int			ft_atoi(const char *str);
 void		*ft_memset(void *str, int c, size_t n);
 void		ft_bzero(void *s, size_t n);
@@ -43,4 +42,5 @@ int			ft_memcmp(const void *s1, const void *s2, size_t n);
 char		*ft_strnstr(const char *big, const char *little, size_t len);
 void		*ft_calloc(size_t nitems, size_t size);
 char		*ft_strdup(const char *s);
+char		*ft_substr(char const *s, unsigned int start, size_t len);
 #endif
