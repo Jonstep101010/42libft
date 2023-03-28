@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 17:18:28 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/27 19:33:15 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/03/28 17:45:05 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,19 @@
 
 int	main(void)
 {
-	const char	*s1 = "Hello, He";
-	const char	*s2 = "He";
+	char const	s[] = "Test space delimiter";
+	char		c;
+	c = ' ';
+	//char	str[] = "Test space delimiter";
+	//char	*token = strtok(str, &c);
 
-	printf("\n'%s'\n", ft_strtrim(s1, s2));
+	//while (token != NULL)
+	//{
+	//	printf("\n%s", token);
+	//	token = strtok(NULL, &c);
+	//}
+	//printf("\n");
+	ft_split(s, c);
 	return (0);
 }
 	//substrtest();
@@ -30,3 +39,24 @@ int	main(void)
 	//memcmptest();
 	//strnstrtest();
 	//strncmptest();	void strjointest();
+		//char const	s[] = "Test space delimiter";
+	//char		c;
+
+	//c = ' ';
+	//char	str[] = "Test space delimiter";
+	//char	*token = strtok(str, " ");
+
+	//while (token != NULL)
+	//{
+	//	printf("\n%s", token);
+	//	token = strtok(NULL, " ");
+	//}
+	//printf("\n");
+
+	//int		n = 9234;
+	////char	result[50];
+
+	////sprintf(result, "%d", n);
+	////printf("\nString for num is '%s'", result);
+	////getchar();
+	//printf("\nString for num is '%s'\n", ft_itoa(n));

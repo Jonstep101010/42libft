@@ -6,41 +6,12 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 16:28:24 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/27 18:39:47 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/03/28 10:05:09 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-
-/*char	*ft_strjoin(char const *s1, char const *s2)
-{
-	char	*strcat;
-	size_t	strlen;
-	size_t	i;
-	size_t	x;
-
-	i = 0;
-	x = 0;
-	strlen = ft_strlen(s1) + ft_strlen(s2) + 1;
-	strcat = (char *) malloc(strlen);
-	if ((!s1) && (!s2))
-		strcat[i] = '\0';
-	if (!strcat)
-		return (0);
-	while ((i < ft_strlen(s1)) && (i < strlen))
-	{
-		strcat[i] = s1[i];
-		i++;
-	}
-	while (i < strlen)
-	{
-		strcat[i] = s2[x];
-		x++;
-		i++;
-	}
-	return (strcat);
-}*/
 
 /*
 ** @brief allocates and returns new string, concatenation s1 and s2

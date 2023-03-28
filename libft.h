@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:52 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/27 19:00:17 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/03/28 11:42:00 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <ctype.h>
 # include <stdint.h>
 # include <stddef.h>
+# include <stdlib.h>
 
 int			ft_isdigit(int c);
 int			ft_isalpha(int c);
@@ -45,4 +46,6 @@ char		*ft_strdup(const char *s);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s1, char const *set);
+char		**ft_split(char const *s, char c);
+char		*ft_itoa(int n);
 #endif
