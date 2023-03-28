@@ -22,10 +22,11 @@ static int	word_counter(char const *s, char c)
 		if (*s != c)
 		{
 			count++;
-			while ((*s != c) && *s)
+			while ((*s != c) && (*s))
 				s++;
 		}
-		s++;
+		else
+			s++;
 	}
 	return (count);
 }
@@ -58,43 +59,31 @@ static int	word_length(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**arr_s;
-	char	*arr;
 	int		count;
-	int		length;
-	size_t	i;
-	size_t	x;
+	int		i;
 
 	if (!s)
 		return (0);
 	i = 0;
-	x = 0;
-	count = word_counter(s, c);
-	length = word_length(s, c);
-	printf("\ncount: %d\nlength: %d\n", count, length);
-	arr_s = (char **) malloc(ft_strlen(s));
+	arr_s = malloc(sizeof(char *) * (word_counter(s, c) + 1));
 	if (!arr_s)
 		return (0);
 	while (*s)
 	{
 		if (*s != c)
 		{
-			while ((*s) && (*s != c))
-			{
-				arr = ft_substr(s, x, length + 1);
-				arr_s[i][x] = arr[x];
-				x++;
-				s++;
-			}
+			arr_s[i] = ft_substr(s, 0, word_length(s, c));
+			if (!arr_s[i])
+				return (NULL);
+			i++;
+			s += word_length(s, c);
 		}
-		//printf("%c", arr[i]);
-		i++;
-		s++;
-		x = 0;
+		else
+			s++;
 	}
-	if (!arr_s)
-		return (0);
+	arr_s[i] = NULL;
 	return (arr_s);
-}	
+}
 
 //determine how many strings to store
 	//allocate space for individual string in array
