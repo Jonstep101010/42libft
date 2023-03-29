@@ -19,36 +19,45 @@
 ** @return string representing integer, NULL if allocation fails
 */
 
-/*static size_t	getdigits(int n)
+static size_t	ndigits(int n)
 {
 	size_t	digits;
 
-	digits = 1;
-	if (n /= 10)
-		n*= 10;
+	digits = 0;
+	while (n != 0)
+	{
+		n /= 10;
+		digits++;
+	}
 	return (digits);
 }
 char	*ft_itoa(int n)
 {
 	size_t	digits;
-	//size_t	i
 	char	*str;
-	char	c;
+	long int	num;
 
-	digits = getdigits(n);
-	str = malloc(digits);
+	num = n;
+	digits = ndigits(n);
+	if (n == 0)
+		return (ft_strdup("0"));
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	if (n < 0)
+	{
+		num *= -1;
+		digits++;
+	}
+	str = malloc(sizeof(char) * digits + 1);
 	if (!str)
 		return (0);
-	while ((*str) && (digits-- > 0))
+	*(str + digits) = '\0';
+	while (digits--)
 	{
-		c = (digits /= 10) + (*str + 48);
-		*str = c;
-		digits *= 10;
-		str++;
+		*(str + digits) = num % 10 + '0';
+		num /= 10;
 	}
-	*str = '\0';
+	if (n < 0)
+		*str = '-';
 	return (str);
-}*/
-
-
-//2147483647
+}
