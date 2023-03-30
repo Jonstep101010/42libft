@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:52 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/28 11:42:00 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/03/30 21:14:36 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,10 @@ char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s1, char const *set);
 char		**ft_split(char const *s, char c);
 char		*ft_itoa(int n);
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void		ft_striteri(char *s, void (*f)(unsigned int, char*));
+void		ft_putchar_fd(char c, int fd);
+void		ft_putstr_fd(char *s, int fd);
+void		ft_putendl_fd(char *s, int fd);
+void		ft_putnbr_fd(int n, int fd);
 #endif

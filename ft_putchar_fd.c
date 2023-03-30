@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 17:18:28 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/30 18:46:35 by jschwabe         ###   ########.fr       */
+/*   Created: 2023/03/30 19:26:04 by jschwabe          #+#    #+#             */
+/*   Updated: 2023/03/30 19:30:07 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//just for testing makefile and functions as well as header
-//cc -Wall -Wextra  *.c && ./a.out
-
+#include <unistd.h>
 #include "libft.h"
-#include <stdlib.h>
-//test_functionname();
 
-int	main(void)
+void	ft_putchar_fd(char c, int fd)
 {
-	return (0);
+	write(fd, &c, 1);
 }
-	//substrtest();
-	//memchrtest();
-	//memcmptest();
-	//strnstrtest();
-	//strncmptest();	void strjointest();

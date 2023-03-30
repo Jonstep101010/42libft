@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 17:18:28 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/30 18:46:35 by jschwabe         ###   ########.fr       */
+/*   Created: 2023/03/30 20:32:19 by jschwabe          #+#    #+#             */
+/*   Updated: 2023/03/30 20:46:26 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//just for testing makefile and functions as well as header
-//cc -Wall -Wextra  *.c && ./a.out
-
+#include <unistd.h>
 #include "libft.h"
-#include <stdlib.h>
-//test_functionname();
 
-int	main(void)
+void	ft_putendl_fd(char *s, int fd)
 {
-	return (0);
+	ft_putstr_fd(s, fd);
+	ft_putstr_fd("\n", fd);
 }
-	//substrtest();
-	//memchrtest();
-	//memcmptest();
-	//strnstrtest();
-	//strncmptest();	void strjointest();

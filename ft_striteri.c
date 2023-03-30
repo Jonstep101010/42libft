@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 17:18:28 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/30 18:46:35 by jschwabe         ###   ########.fr       */
+/*   Created: 2023/03/30 19:05:58 by jschwabe          #+#    #+#             */
+/*   Updated: 2023/03/30 19:21:58 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//just for testing makefile and functions as well as header
-//cc -Wall -Wextra  *.c && ./a.out
-
 #include "libft.h"
-#include <stdlib.h>
-//test_functionname();
 
-int	main(void)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	return (0);
+	unsigned int	i;
+
+	i = 0;
+	while (i < ft_strlen(s))
+	{
+		(*f)(i, &s[i]);
+		i++;
+	}
 }
-	//substrtest();
-	//memchrtest();
-	//memcmptest();
-	//strnstrtest();
-	//strncmptest();	void strjointest();
