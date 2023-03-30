@@ -17,23 +17,29 @@
 #include <stdlib.h>
 //test_functionname();
 
-int	main(void)
-{
-	char const	s[] = "Test space delimiter";
-	char		c;
-	c = ' ';
-	//char	str[] = "Test space delimiter";
-	//char	*token = strtok(str, &c);
+// int	main(void)
+// {
+// 	char const	s[] = "Test";
+// 	char		c;
+// 	c = ' ';
+// 	char	**arr;
+// 	size_t	i = 0;
+// 	arr = ft_split(s, c);
+// 	//char	str[] = "Test space delimiter";
+// 	//char	*token = strtok(str, &c);
 
-	//while (token != NULL)
-	//{
-	//	printf("\n%s", token);
-	//	token = strtok(NULL, &c);
-	//}
-	//printf("\n");
-	ft_split(s, c);
-	return (0);
-}
+// 	//while (token != NULL)
+// 	//{
+// 	//	printf("\n%s", token);
+// 	//	token = strtok(NULL, &c);
+// 	//}
+// 	//printf("\n");
+// 	while (arr[i] != NULL)
+// 	{
+// 		printf("%s", arr[i++]);
+// 	}
+// 	return (0);
+// }
 	//substrtest();
 	//memchrtest();
 	//memcmptest();

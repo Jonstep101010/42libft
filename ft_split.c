@@ -16,10 +16,8 @@
 static int	word_counter(char const *s, char c)
 {
 	int	count;
-	int	i;
 
 	count = 0;
-	i = 0;
 	while (*s)
 	{
 		if (*s != c)
@@ -34,60 +32,23 @@ static int	word_counter(char const *s, char c)
 	return (count);
 }
 
-/* 
-** determine length for each word */
-static int	word_length(char const *s, char c)
+//determine length for each word
+static size_t	word_length(char const *s, char c)
 {
-	int	length;
+	size_t	length;
 
 	length = 0;
-	while ((s[length]) && (s[length] != c))
+	while ((s[length] != '\0') && (s[length] != c))
 		length++;
 	return (length);
 }
 
-
-static void	free_mem(char **arr, size_t i)
+static void	free_mem(char **arr, int i)
 {
 	while (i >= 0)
-	{
-		free(arr[i]);
-		i--;
-	}
+		free(arr[i--]);
 	free(arr);
 }
-
-char	**ft_split(char const *s, char c)
-{
-	char	**arr;
-	size_t	i;
-
-	i = 0;
-	if (!s)
-		return (NULL);
-	arr = ft_calloc(sizeof(char *), (word_counter(s, c) + 1));
-	if (!arr)
-		return (NULL);
-	while (*s)
-	{
-		if (*s != c)
-		{
-			arr[i] = ft_substr(s, 0, word_length(s, c));
-			if (!arr[i])
-			{
-				free_mem(arr, i - 1);
-				return (NULL);
-			}
-			i++;
-			s += word_length(s, c);
-		}
-		else
-			s++;
-	}
-	arr[i] = NULL;
-	return (arr);
-}
-
 
 /**
 ** @brief 
@@ -101,3 +62,33 @@ char	**ft_split(char const *s, char c)
 ** \details allocated memory freed, no manipulation of input 
 ** \details (edge: empty input, only delimiter, no delimiter: return array input)
 */
+char	**ft_split(char const *s, char c)
+{
+	char	**arr;
+	size_t	i;
+
+	i = 0;
+	if (!s)
+		return (NULL);
+	arr = ft_calloc(sizeof(char *), (word_counter(s, c)) + 1);
+	if (!arr)
+		return (NULL);
+	while (*s)
+	{
+		if (*s != c)
+		{
+			arr[i] = ft_substr(s, 0, word_length(s, c));
+			if (!arr[i])
+			{
+				free_mem(arr, i);
+				return (NULL);
+			}
+			i++;
+			s += word_length(s, c);
+		}
+		else
+			s++;
+	}
+	arr[i] = NULL;
+	return (arr);
+}
