@@ -57,3 +57,4 @@ Module.symvers
 Mkfile.old
 dkms.conf
 workingspl.c
+FT_SPLIT_TESTER
