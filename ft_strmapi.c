@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 17:10:59 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/30 18:36:21 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/03/31 18:40:09 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ft_strlcpy(cpy, s, slen + 1);
 	while (i < slen)
 	{
-		cpy[i] = (*f)(i, cpy[i]);
+		cpy[i] = f(i, cpy[i]);
 		i++;
 	}
 	return (cpy);

@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/30 19:05:58 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/31 18:39:06 by jschwabe         ###   ########.fr       */
+/*   Created: 2023/03/31 16:45:57 by jschwabe          #+#    #+#             */
+/*   Updated: 2023/03/31 17:05:34 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+/* 
+** @brief returns last node of list
+** @param lst beginning of list
+** @return last node of list
+*/
+t_list	*ft_lstlast(t_list *lst)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (i < ft_strlen(s))
-	{
-		f(i, &s[i]);
-		i++;
-	}
+	if (!lst)
+		return (NULL);
+	while (lst -> next != NULL)
+		lst = lst -> next;
+	return (lst);
 }

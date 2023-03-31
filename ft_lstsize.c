@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/30 19:05:58 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/31 18:39:06 by jschwabe         ###   ########.fr       */
+/*   Created: 2023/03/31 16:19:33 by jschwabe          #+#    #+#             */
+/*   Updated: 2023/03/31 16:44:34 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+/*
+** @brief returns the number of nodes in lst
+** @param lst beginning of list
+** @return len of list as an int
+*/
+int	ft_lstsize(t_list *lst)
 {
-	unsigned int	i;
+	int	len;
 
-	i = 0;
-	while (i < ft_strlen(s))
+	len = 0;
+	while (lst != NULL)
 	{
-		f(i, &s[i]);
-		i++;
+		len++;
+		lst = lst -> next;
 	}
+	return (len);
 }
