@@ -19,7 +19,6 @@
 ** @details next is initialized to NULL
 ** \details 
 */
-
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_node;

@@ -19,6 +19,7 @@
 
 int	main(void)
 {
+	// ft_lstmap()
 	return (0);
 }
 	//substrtest();

@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-/// @brief itertes list and applies f on content
+/// @brief iterates list and applies f on content
 /// @param lst 
-/// @param f 
-/// @param del 
+/// @param f function to apply to lst
+/// @param del function to delete lst if required
 /// @return 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -25,15 +25,16 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	if ((!lst) || (!f))
 		return (NULL);
 	list = NULL;
-	while (lst != NULL)
+	while (lst)
 	{
-		list = f(lst ->content);
-		list = list -> next;
+		node = ft_lstnew((*f)(lst ->content));
+		if (!node)
+		{
+			ft_lstclear(&list, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&list, node);
 		lst = lst -> next;
 	}
-	if (del)
-    	del(lst ->content);
-	if (!list)
-    	return (NULL);
 	return (list);
 }
