@@ -24,15 +24,16 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if ((!lst) || (!f))
 		return (NULL);
-	//list = NULL;
+	list = NULL;
 	while (lst != NULL)
 	{
 		list = f(lst ->content);
-		list = lst -> next;
-		del(lst ->content);
+		list = list -> next;
 		lst = lst -> next;
 	}
-	//if (!list)
-	//	return (NULL);
+	if (del)
+    	del(lst ->content);
+	if (!list)
+    	return (NULL);
 	return (list);
 }
