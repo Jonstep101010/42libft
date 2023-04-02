@@ -6,11 +6,12 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 18:59:32 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/28 09:49:28 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/02 20:15:56 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 /*
 ** @brief copies with set removed from beginning and end of string
 ** @param s1 string to trim

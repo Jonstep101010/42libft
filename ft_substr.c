@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 11:59:05 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/27 16:05:41 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/02 20:12:32 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,16 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
-	size_t	s_length;
+	size_t	slen;
 	size_t	i;
 
 	if (!s)
 		return (0);
-	s_length = ft_strlen(s);
-	if (start >= s_length)
+	slen = ft_strlen(s);
+	if (start >= slen)
 		return (ft_strdup(""));
-	if (len >= s_length - start)
-		len = s_length - start;
+	if (len >= slen - start)
+		len = slen - start;
 	substr = (char *) malloc(len + 1);
 	if (!substr)
 		return (0);

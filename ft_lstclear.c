@@ -6,15 +6,17 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 18:46:23 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/31 19:57:41 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/02 20:50:15 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
+
 /*
 ** @brief deletes and frees node and successors
-** @param lst address of pointer to node
-** @param del address of function used to delete content
+** @param lst &pointer to node
+** @param del &function used to delete content
 ** @details (*lst)->content is pointer, instead of lst->content
 ** \details needs tmp t_list for storing data before deletion
 */

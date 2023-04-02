@@ -6,28 +6,29 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 14:10:19 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/31 15:18:54 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/02 20:42:11 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 /*
-** @brief allocate with malloc content is initialized with its value
+** @brief allocate with malloc - content initialized with its value
 ** @param content to create node with
-** @return new node
+** @return new node, NULL if failure
 ** @details next is initialized to NULL
-** \details 
 */
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_node;
 
-	new_node = malloc(sizeof(t_list));
+	new_node = (t_list *) malloc((sizeof(t_list)));
 	if (new_node)
 	{
 		new_node -> content = content;
 		new_node -> next = NULL;
+		return (new_node);
 	}
-	return (new_node);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 11:34:09 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/30 17:08:52 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/02 20:22:27 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char	*ft_itoa(int n)
 
 	num = n;
 	digits = ndigits(num);
-	s = malloc(sizeof(char) * digits + 1);
+	s = ft_calloc(sizeof(char), digits + 1);
 	if (!s)
 		return (0);
 	if (num < 0)

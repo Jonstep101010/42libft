@@ -10,25 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/// @brief checks if given value is a digit
-/// @param c value of character
-/// @return 1 if true, 0 if not
+/*
+** @brief checks if given value is a digit
+** @param c value of character
+** @return 1 if true, 0 if not
+*/
 int	ft_isdigit(int c)
 {
 	if ((c > 47) && (c < 58))
 		return (1);
 	return (0);
 }
-
-/*int	main(void)
-{
-	char	c;
-
-	c = '0';
-	printf("Is c numeric?: %d\n", ft_isdigit(c));
-	printf("Is c numeric (orgf)?: %d\n", isdigit(c));
-	c = '}';
-	printf("Is c numeric?: %d\n", ft_isdigit(c));
-	printf("Is c numeric (orgf)?: %d\n", isdigit(c));
-	return (0);
-}*/

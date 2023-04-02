@@ -6,20 +6,21 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 16:12:18 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/26 01:39:49 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/02 20:06:52 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/// @brief find substring in string
-/// @param big string to search
-/// @param little substring to find (null-terminated)
-/// @param len characters to search
-/// @return if little is empty - big,
-/// \return if no occurrence - NULL,
-/// \return otherwise return pointer to first character of first occurrence
-/// @details characters after '\0' are not searched, result needs to be casted
+/*
+** @brief find substring in string
+** @param big string to search
+** @param little substring to find (null-terminated)
+** @param len characters to search
+** @return if little is empty - big, if no occurrence - NULL,
+** \return otherwise return pointer to first character of first occurrence
+** @details characters after '\0' are not searched, result needs to be casted
+*/
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;

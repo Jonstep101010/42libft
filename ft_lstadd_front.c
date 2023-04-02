@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 15:54:27 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/31 16:12:50 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/02 20:43:12 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 /* 
 ** @brief adds node new at beginning of list
-** @param lst address of pointer to first link in list
-** @param new address of pointer for node to add
+** @param lst address (ptr) first link in list
+** @param new address (ptr) node to add
 ** @details new node is set to new head
 ** \details next is set to new node, pointer updated to new node
 */

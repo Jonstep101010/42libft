@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 18:47:55 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/30 15:41:43 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/02 19:55:34 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@
 */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t	i;
+	size_t	srclen;
 	size_t	x;
 
 	x = 0;
-	i = ft_strlen(src);
+	srclen = ft_strlen(src);
 	if (size == 0)
-		return (i);
+		return (srclen);
 	while ((src[x] != '\0') && (x < size - 1))
 	{
 		dst[x] = src[x];
@@ -37,5 +37,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	if ((src[x] == '\0') || (x == size - 1))
 		dst[x] = '\0';
-	return (i);
+	return (srclen);
 }

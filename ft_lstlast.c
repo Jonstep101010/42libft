@@ -6,15 +6,16 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 16:45:57 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/31 17:05:34 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/02 20:44:41 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 /* 
-** @brief returns last node of list
-** @param lst beginning of list
-** @return last node of list
+** @brief returns last node (list)
+** @param lst beginning (list)
+** @return last node (list)
 */
 t_list	*ft_lstlast(t_list *lst)
 {

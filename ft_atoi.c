@@ -6,17 +6,19 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 13:34:05 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/25 23:54:54 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/02 20:09:23 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/// @brief converts numbers in char str to integer
-/// @param str items to convert
-/// @return integer * notation (-prefix if found)
-/// @details only allows for one sign (+ or -) in front of numbers in string
-/// \details deals with whitespace
-/// \details converts using multiplication by 10, adding value,
-/// \details subtracting ascii for '0'
+/*
+** @brief converts numbers in char str to integer
+** @param str items to convert
+** @return integer * notation (-prefix if found)
+** @details only allows for one sign (+ or -) in front of numbers in string
+** \details deals with whitespace
+** \details converts using multiplication by 10, adding value,
+** \details subtracting ascii for '0'
+*/
 int	ft_atoi(const char *str)
 {
 	int	notation;
@@ -43,13 +45,3 @@ int	ft_atoi(const char *str)
 	}
 	return (total * notation);
 }
-
-/*int	main(void)
-{
-	//charstr[i][] = "-2147483648";
-
-	printf(str[i] = %d\n", ft_atoi("-2147483648"));
-	/str[i] = "StuffThatsDumb";
-	//printf(str[i] = %d\n", atoistr[i]));
-	return (0);
-}*/

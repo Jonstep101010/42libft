@@ -6,18 +6,20 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 10:06:22 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/30 14:50:22 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/02 20:21:20 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//determine how many strings to store
+/*determine how many strings to store*/
 static int	word_counter(char const *s, char c)
 {
 	int	count;
+	int	i;
 
 	count = 0;
+	i = 0;
 	if (!s)
 		return (0);
 	while (*s)
@@ -34,8 +36,7 @@ static int	word_counter(char const *s, char c)
 	return (count);
 }
 
-/* 
-** determine length for each word */
+/*determine length for each word*/
 static int	word_length(char const *s, char c)
 {
 	int	length;
@@ -46,6 +47,7 @@ static int	word_length(char const *s, char c)
 	return (length);
 }
 
+/*Free memory of 2d arr*/
 static void	free_mem(char **arr, int i)
 {
 	while (i >= 0)
@@ -57,17 +59,17 @@ static void	free_mem(char **arr, int i)
 }
 
 /*
-** @brief 
+** @brief split string by delimiter c
 ** @param s string to be split
 ** @param c delimiter char
 ** @return array of new strings - resulting from split,
 ** \return NULL if allocation fails
-** @details allocates, returns array of strings (by splitting s using c);
-** \details array has to end with a NULL pointer; use malloc, free
+** @details allocates memory and returns array of strings (malloc)
+** \details array has to end with a NULL pointer; 
 ** \details handle leading & trailing delimiting characters - no empty substrings
 ** \details allocated memory freed, no manipulation of input 
 ** \details (edge: empty input, only delimiter, no delimiter: return array input)
-** \details uses helper functions free_mem (arr), word_length, word_counter
+** \details uses helper functions free_mem (free), word_length, word_counter
 */
 char	**ft_split(char const *s, char c)
 {

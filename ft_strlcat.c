@@ -6,11 +6,12 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 18:40:44 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/27 16:33:36 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/02 19:56:27 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 /* 
 ** @brief concatenates two strings, terminate (if free byte in dst)
 ** @param dst pointer to string
@@ -45,13 +46,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[i + dstlen] = '\0';
 	return (dstlen + srclen);
 }
-
-//int	main(void)
-//{
-//	char	src[5] = "Great";
-//	char	dst[5] = "dstst";
-
-//	printf("\nlength: %lu", ft_strlcat(dst, src, sizeof(dst)));
-//	printf("\ndst: %s\n", dst);
-//	return (0);
-//}

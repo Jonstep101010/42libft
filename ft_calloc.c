@@ -6,14 +6,16 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 19:03:34 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/27 18:17:55 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/02 22:01:59 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+#include <stdint.h>
 
-/* @brief allocates and points to memory
+/* 
+** @brief allocates and points to memory
 ** @param nitems number of elements to allocate
 ** @param size size of elements
 ** @return pointer to allocated memory, NULL if failure (1, for byte possible)
@@ -33,12 +35,3 @@ void	*ft_calloc(size_t nitems, size_t size)
 		ft_bzero(ptr, nitems * size);
 	return (ptr);
 }
-
-/*
-** same as if and ft_bzero
-	**while (i < (nitems * size))
-	**{
-	**	((unsigned char *) ptr)[i] = 0;
-	**	i++;
-	**}
-*/

@@ -6,11 +6,12 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 16:19:33 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/03/31 16:44:34 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/02 20:43:49 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 /*
 ** @brief returns the number of nodes in lst
 ** @param lst beginning of list
