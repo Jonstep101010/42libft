@@ -17,11 +17,11 @@
 #include <stdlib.h>
 //test_functionname();
 
-int	main(void)
-{
-	// ft_lstmap()
-	return (0);
-}
+// int	main(void)
+// {
+// 	// ft_lstmap()
+// 	return (0);
+// }
 	//substrtest();
 	//memchrtest();
 	//memcmptest();
