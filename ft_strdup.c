@@ -6,13 +6,11 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 20:24:13 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/02 20:11:11 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/03 14:28:07 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <unistd.h>
 
 /*
 ** @brief duplicate a string through memory allocation

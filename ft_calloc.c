@@ -5,14 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/24 19:03:34 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/02 22:01:59 by jschwabe         ###   ########.fr       */
+/*   Created: 2023/03/24 19:03:34 by jschwabe          #+#   #+#            */
+/*   Updated: 2023/04/03 12:53:21 by jschwabe         ###  ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdint.h>
 
 /* 
 ** @brief allocates and points to memory
@@ -26,8 +24,8 @@ void	*ft_calloc(size_t nitems, size_t size)
 {
 	void	*ptr;
 
-	if (nitems > SIZE_MAX / size)
-		return (NULL);
+	if (nitems && (nitems * size) / nitems != size)
+		return (0);
 	ptr = malloc(nitems * size);
 	if (ptr == 0)
 		return (0);

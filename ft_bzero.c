@@ -6,12 +6,11 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 16:04:38 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/02 19:48:24 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/03 14:24:47 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <ctype.h>
 
 /*
 ** @brief places n zero-valued bytes in memory area (*s)

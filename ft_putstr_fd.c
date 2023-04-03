@@ -6,12 +6,11 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 20:23:27 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/02 20:34:18 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/03 14:27:59 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 /*
 ** @brief output the string s to given file descriptor

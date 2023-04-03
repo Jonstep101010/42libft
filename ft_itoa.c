@@ -6,11 +6,10 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 11:34:09 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/02 20:22:27 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/03 14:25:16 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 /*

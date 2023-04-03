@@ -6,12 +6,11 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 16:28:24 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/02 20:13:51 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/03 14:28:16 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 /*
 ** @brief allocates and returns new string, concatenation s1 and s2

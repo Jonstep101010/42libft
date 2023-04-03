@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:52 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/02 19:56:11 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/03 14:27:15 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdint.h>
 # include <stddef.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 //multiple content
 //next pointer to struct node
