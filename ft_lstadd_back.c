@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 17:08:28 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/03 14:26:02 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/03 18:50:02 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 /*
 ** @brief adds node new at end of list
-** @param lst address of pointer to first lik of a list
-** @param new address of pointer for node to add
+** @param lst &pointer to first lik of a list
+** @param new &pointer for node to add
 ** @details calls ft_lstlast for finding last value
 */
 void	ft_lstadd_back(t_list **lst, t_list *new)

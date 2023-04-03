@@ -6,19 +6,18 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:52 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/03 14:27:15 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/03 18:59:36 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
+# include <stdlib.h>
 # include <string.h>
 # include <stdio.h>
 # include <ctype.h>
 # include <stdint.h>
 # include <stddef.h>
-# include <stdlib.h>
 # include <unistd.h>
 
 //multiple content

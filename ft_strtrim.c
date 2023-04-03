@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 18:59:32 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/02 20:15:56 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/03 17:59:45 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trim;
-	size_t	length;
+	size_t	slen;
 
 	if (!s1)
 		return (0);
@@ -34,10 +34,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup(s1));
 	while ((*s1) && ft_strchr(set, *s1))
 		s1++;
-	length = ft_strlen(s1);
-	while ((length > 0) && ft_strchr(set, s1[length - 1]))
-		length--;
-	trim = ft_substr(s1, 0, length);
+	slen = ft_strlen(s1);
+	while ((slen > 0) && ft_strchr(set, s1[slen - 1]))
+		slen--;
+	trim = ft_substr(s1, 0, slen);
 	if (!trim)
 		return (0);
 	return (trim);

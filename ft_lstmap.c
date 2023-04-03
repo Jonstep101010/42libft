@@ -6,16 +6,15 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 19:34:05 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/02 20:56:36 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/03 18:59:44 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 /*
-** @brief itertes list and applies f on content
-** @param lst list to be iterated over, function applied copy returned
+** @brief iterates list and applies f on content
+** @param lst list to be iterated over, function applied and copy returned
 ** @param f function to apply to contents of lst
 ** @param del function used to delete, if necessary
 ** @return list, NULL if allocation fails
