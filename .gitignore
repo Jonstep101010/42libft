@@ -60,3 +60,4 @@ workingspl.c
 FT_SPLIT_TESTER
 venv
 .vscode
+test

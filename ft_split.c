@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 10:06:22 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/02 20:21:20 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/11 23:08:57 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@
 static int	word_counter(char const *s, char c)
 {
 	int	count;
-	int	i;
 
 	count = 0;
-	i = 0;
 	if (!s)
 		return (0);
 	while (*s)

@@ -30,6 +30,6 @@ void	*ft_calloc(size_t nitems, size_t size)
 	if (ptr == 0)
 		return (0);
 	if (ptr)
-		ft_bzero(ptr, nitems * size);
+		ft_memset(ptr, 0, nitems * size);
 	return (ptr);
 }

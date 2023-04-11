@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 17:36:31 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/02 19:49:31 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/11 23:08:40 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,13 @@
 */
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned int	i;
 	char			*d;
 	const char		*s = src;
 
-	i = 0;
 	d = dst;
 	if (!d && !s)
 		return (0);
-	while (n > 0)
-	{
-		d[i] = s[i];
-		i++;
-		n--;
-	}
+	while (n-- && (d || s))
+		*d++ = *s++;
 	return (dst);
 }
