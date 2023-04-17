@@ -21,20 +21,13 @@
 */
 char	*ft_strdup(const char *s)
 {
-	char	*ptr;
-	size_t	i;
+	char	*copy;
 	size_t	size;
 
-	i = 0;
 	size = ft_strlen(s) + 1;
-	ptr = (char *) malloc(size);
-	if (!ptr)
+	copy = malloc(size);
+	if (!copy)
 		return (0);
-	while (i < size - 1)
-	{
-		ptr[i] = s[i];
-		i++;
-	}
-	ptr[i] = '\0';
-	return (ptr);
+	ft_memcpy(copy, s, size);
+	return (copy);
 }

@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+static char	*helper_copy_terminate(char *substr, char const *s, unsigned int start, size_t len)
+{
+	ft_strlcpy(substr, s + start, len);
+	ft_strlcat(substr, "", len);
+	return (substr);
+}
+
 /*
 ** @brief return substring for string - allocate memory
 ** @param s string from which to create substring
@@ -29,7 +36,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
 	size_t	slen;
-	size_t	i;
 
 	if (!s)
 		return (0);
@@ -39,14 +45,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (len > slen - start)
 		len = slen - start;
 	substr = (char *) malloc(len + 1);
-	if (!substr)
-		return (0);
-	i = 0;
-	while (i < len)
-	{
-		substr[i] = s[start + i];
-		i++;
-	}
-	substr[i] = '\0';
-	return (substr);
+	if (substr)
+		return(helper_copy_terminate(substr, s, start, len + 1));
+	return (0);
 }
