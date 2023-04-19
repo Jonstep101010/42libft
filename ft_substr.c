@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-static char	*helper_copy_terminate(char *substr, char const *s, unsigned int start, size_t len)
+static char	*helper_copy_terminate(char *substr, char const *s, size_t len)
 {
-	ft_strlcpy(substr, s + start, len);
+	ft_strlcpy(substr, s, len);
 	ft_strlcat(substr, "", len);
 	return (substr);
 }
@@ -46,6 +46,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len = slen - start;
 	substr = (char *) malloc(len + 1);
 	if (substr)
-		return(helper_copy_terminate(substr, s, start, len + 1));
+		return(helper_copy_terminate(substr, s + start, len + 1));
 	return (0);
 }
