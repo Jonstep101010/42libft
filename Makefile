@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+         #
+#    By: jschwabe <jonas.paul.schwabe@gmail.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/17 14:46:57 by jschwabe          #+#    #+#              #
-#    Updated: 2023/04/02 19:12:17 by jschwabe         ###   ########.fr        #
+#    Updated: 2023/04/29 13:08:53 by jschwabe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strle
 B_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
 		ft_lstmap.c
-
+TESTFILE = main.c
 OBJS = $(SRCS:.c=.o)
 B_OBJS = $(B_SRCS:.c=.o)
 
@@ -54,6 +54,12 @@ clean:
 fclean: clean
 	$(RM) $(RMFLAGS) $(NAME)
 
+tclean: clean
+	$(RM) $(RMFLAGS) a.out
+	$(RM) $(RMFLAGS) $(TESTFILE:.c=.o)
+test: $(NAME) $(TESTFILE:.c=.o)
+	$(CC) $(CFLAGS) -o ./a.out $(TESTFILE:.c=.o) $(NAME)
+	./a.out
 re: fclean all
 
 .PHONY: all bonus clean fclean re
