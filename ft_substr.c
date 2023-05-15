@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 11:59:05 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/03 16:44:40 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/05/15 19:00:39 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,3 +49,31 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (helper_copy_terminate(substr, s + start, len + 1));
 	return (0);
 }
+
+/*alternative without calls to ft_strlc...*/
+/* char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*substr;
+	size_t	slen;
+	size_t	i;
+
+	if (!s)
+		return (0);
+	slen = ft_strlen(s);
+	if (start >= slen)
+		return (ft_strdup(""));
+	if (len > slen - start)
+		len = slen - start;
+	substr = (char *) malloc(len + 1);
+	if (!substr)
+		return (0);
+	i = 0;
+	while (start < slen && i < len)
+	{
+		substr[i] = s[start];
+		start++;
+		i++;
+	}
+	substr[i] = '\0';
+	return (substr);
+} */

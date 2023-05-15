@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 20:24:13 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/03 14:28:07 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/05/15 18:53:25 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,18 @@ char	*ft_strdup(const char *s)
 	ft_memcpy(copy, s, size);
 	return (copy);
 }
+
+/*alternative without ft_memcpy*/
+/* char	*ft_strdup(const char *s)
+{
+	char	*copy;
+	size_t	size;
+
+	size = ft_strlen(s) + 1;
+	copy = malloc(size);
+	if (!copy)
+		return (0);
+	while (size-- && (copy))
+		copy[size] = s[size];
+	return (copy);
+} */
