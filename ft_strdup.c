@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 20:24:13 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/05/15 18:53:25 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/05/19 21:42:24 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,10 @@ char	*ft_strdup(const char *s)
 	char	*copy;
 	size_t	size;
 
-	size = ft_strlen(s) + 1;
+	size = 0;
+	while (s[size] != '\0')
+		size++;
+	size += 1;
 	copy = malloc(size);
 	if (!copy)
 		return (0);
