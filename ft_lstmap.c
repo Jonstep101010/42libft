@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 19:34:05 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/03 18:59:44 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/05/20 22:18:36 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,18 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*list;
 	t_list	*node;
+	void	*content;
 
 	if ((!lst) || (!f))
 		return (NULL);
 	list = NULL;
 	while (lst)
 	{
-		node = ft_lstnew(f(lst->content));
+		content = (*f)(lst->content);
+		node = ft_lstnew(content);
 		if (!node)
 		{
+			(*del)(content);
 			ft_lstclear(&list, del);
 			return (NULL);
 		}
