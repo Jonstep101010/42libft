@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 19:18:28 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/02 20:52:48 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/05/20 21:32:00 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 */
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while (lst != NULL)
+	while (lst)
 	{
 		f(lst -> content);
 		lst = lst -> next;

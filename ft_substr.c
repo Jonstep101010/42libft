@@ -5,19 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/27 11:59:05 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/05/15 19:00:39 by jschwabe         ###   ########.fr       */
+/*   Created: 2023/05/20 19:01:42 by jschwabe          #+#    #+#             */
+/*   Updated: 2023/05/20 19:01:49 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static char	*helper_copy_terminate(char *substr, char const *s, size_t len)
-{
-	ft_strlcpy(substr, s, len);
-	ft_strlcat(substr, "", len);
-	return (substr);
-}
 
 /*
 ** @brief return substring for string - allocate memory
@@ -38,16 +31,19 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	slen;
 
 	if (!s)
-		return (0);
+		return (NULL);
 	slen = ft_strlen(s);
 	if (start >= slen)
 		return (ft_strdup(""));
 	if (len > slen - start)
 		len = slen - start;
-	substr = (char *) malloc(len + 1);
-	if (substr)
-		return (helper_copy_terminate(substr, s + start, len + 1));
-	return (0);
+	len += 1;
+	substr = (char *) malloc(len);
+	if (!substr)
+		return (NULL);
+	ft_strlcpy(substr, s + start, len);
+	ft_strlcat(substr, "", len);
+	return (substr);
 }
 
 /*alternative without calls to ft_strlc...*/
@@ -58,7 +54,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	if (!s)
-		return (0);
+		return (NULL);
 	slen = ft_strlen(s);
 	if (start >= slen)
 		return (ft_strdup(""));
@@ -66,14 +62,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len = slen - start;
 	substr = (char *) malloc(len + 1);
 	if (!substr)
-		return (0);
-	i = 0;
-	while (start < slen && i < len)
-	{
+		return (NULL);
+	i = -1;
+	start -= 1;
+	while (++i < len && ++start < slen)
 		substr[i] = s[start];
-		start++;
-		i++;
-	}
-	substr[i] = '\0';
+	substr[len] = '\0';
 	return (substr);
 } */

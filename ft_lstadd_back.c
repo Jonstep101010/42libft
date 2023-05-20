@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 17:08:28 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/03 18:50:02 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/05/20 21:02:01 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	if (!*lst)
 	{
 		*lst = new;
-		return ;
 	}
-	ft_lstlast(*lst)-> next = new;
+	else
+		ft_lstlast(*lst)-> next = new;
 }

@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 15:54:27 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/03 18:42:02 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/05/20 21:13:34 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if ((new) && (lst))
+	if (new && lst)
 	{
 		new -> next = *lst;
 		*lst = new;

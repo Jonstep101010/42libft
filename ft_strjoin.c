@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 16:28:24 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/05/15 18:57:03 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/05/20 19:30:01 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	strcat = malloc(s1_len + s2_len + 1);
-	if (strcat == 0)
-		return (0);
+	if (!strcat)
+		return (NULL);
 	ft_strlcpy(strcat, s1, s1_len + 1);
-	ft_strlcat(strcat, s2, s1_len + s2_len + 1);
-	return (strcat);
+	return (ft_strlcat(strcat, s2, s1_len + s2_len + 1), strcat);
 }
 
 /*implementation without ft_strlcpy/ft_strlcat*/
@@ -48,6 +47,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		*p++ = *s1++;
 	while (*s2)
 		*p++ = *s2++;
-	*p = '\0';
-	return (copy);
+	return (*p = '\0', copy);
 } */

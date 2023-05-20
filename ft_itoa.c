@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 11:34:09 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/03 14:25:16 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/05/20 20:05:36 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static size_t	ndigits(long int n)
 	num = n;
 	digits = 0;
 	if (n == 0)
-		digits = 1;
+		return (1);
 	while (n != 0)
 	{
 		n /= 10;
@@ -47,7 +47,6 @@ static size_t	ndigits(long int n)
 */
 static char	*convert_int(char *s, size_t digits, long int num, int n)
 {
-	*(s + digits) = '\0';
 	while (digits--)
 	{
 		*(s + digits) = num % 10 + '0';
@@ -73,7 +72,7 @@ char	*ft_itoa(int n)
 	digits = ndigits(num);
 	s = ft_calloc(sizeof(char), digits + 1);
 	if (!s)
-		return (0);
+		return (NULL);
 	if (num < 0)
 		num *= -1;
 	return (convert_int(s, digits, num, n));
