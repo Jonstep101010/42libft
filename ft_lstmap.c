@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 19:34:05 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/05/20 22:18:36 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/05/21 13:39:06 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 /*
 ** @brief iterates list and applies f on content
-** @param lst list to be iterated over, function applied and copy returned
-** @param f function to apply to contents of lst
-** @param del function used to delete, if necessary
-** @return list, NULL if allocation fails
-** @details memory leak on --strict, should be ok (cwenz)
+** use void * to pass to del function on failure
+** @param lst to be iterated over, function applied and copy returned
+** @param (*f) to apply to contents of lst
+** @param (*del) function used to delete, if necessary
+** @return list (copy), NULL if allocation fails
 */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
