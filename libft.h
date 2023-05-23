@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:52 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/03 18:59:36 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/04/28 17:50:35 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,7 @@ void		ft_lstclear(t_list **lst, void (*del)(void *));
 
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+int			ft_putchar(char c);
+int			ft_strnchr(const char *s, int c);
 #endif
