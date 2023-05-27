@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 14:51:00 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/02 20:01:49 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/05/27 23:27:23 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@
 char	*ft_strchr(const char *str, int c)
 {
 	char	*ptr;
+	size_t	i;
 
+	i = -1;
 	ptr = (char *) str;
-	if (*ptr == (char) c)
-		return (ptr);
-	while (*ptr++)
-		if (*ptr == (char) c)
-			return (ptr);
+	while (++i <= ft_strlen(str))
+		if (ptr[i] == (char) c)
+			return (&ptr[i]);
 	return (0);
 }

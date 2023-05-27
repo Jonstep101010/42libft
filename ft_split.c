@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 10:06:22 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/05/20 19:53:08 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/05/27 22:47:06 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ static int	word_counter(char const *s, char c)
 		return (0);
 	while (*s)
 	{
-		if (*s != c)
+		if (*s == c)
+			s++;
+		else
 		{
 			count++;
 			while ((*s != c) && (*s))
 				s++;
 		}
-		else
-			s++;
 	}
 	return (count);
 }
@@ -48,10 +48,9 @@ static int	word_length(char const *s, char c)
 /*Free memory of 2d arr*/
 static void	*free_mem(char **arr, int i)
 {
-	while (i >= 0)
+	while (--i >= 0)
 	{
 		free(arr[i]);
-		i--;
 	}
 	free(arr);
 	return (NULL);
@@ -86,7 +85,7 @@ char	**ft_split(char const *s, char c)
 			arr[i] = ft_substr(s, 0, word_length(s, c));
 			if (!arr[i])
 			{
-				return (free_mem(arr, i - 1));
+				return (free_mem(arr, i));
 			}
 			i++;
 			s += word_length(s, c);

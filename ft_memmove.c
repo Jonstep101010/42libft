@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 19:01:55 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/02 19:54:39 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/05/27 20:04:13 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,19 +29,10 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	ptrdst = (char *) dst;
 	ptrsrc = (char *) src;
 	if (!dst && !src)
-		return (0);
-	if (dst < src)
-	{
-		while (n--)
-			*ptrdst++ = *ptrsrc++;
-	}
-	else
-	{
-		while (n > 0)
-		{
-			ptrdst[n - 1] = ptrsrc[n - 1];
-			n--;
-		}
-	}
+		return (NULL);
+	while (dst >= src && n > 0 && n-- >= 0)
+		ptrdst[n] = ptrsrc[n];
+	while (n--)
+		*ptrdst++ = *ptrsrc++;
 	return (dst);
 }

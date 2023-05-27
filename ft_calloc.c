@@ -25,9 +25,9 @@ void	*ft_calloc(size_t nitems, size_t size)
 	void	*ptr;
 
 	if (nitems && (nitems * size) / nitems != size)
-		return (0);
+		return (NULL);
 	ptr = malloc(nitems * size);
 	if (!ptr)
-		return (0);
+		return (NULL);
 	return ((ft_memset(ptr, 0, nitems * size)));
 }
