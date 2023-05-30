@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 13:11:46 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/05/27 23:31:11 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/05/29 14:34:27 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@
 int	ft_tolower(int ch)
 {
 	if ((ch > 64) && (ch < 91))
-		return (ch += 32);
+		ch += 32;
 	return (ch);
 }

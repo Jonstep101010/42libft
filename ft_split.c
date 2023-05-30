@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 10:06:22 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/05/27 22:47:06 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/05/30 20:04:54 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,18 @@ static int	word_length(char const *s, char c)
 }
 
 /*Free memory of 2d arr*/
-static void	*free_mem(char **arr, int i)
+static void	free_arr(char **arr)
 {
-	while (--i >= 0)
+	int	i;
+
+	i = -1;
+	while (arr[++i])
 	{
 		free(arr[i]);
+		arr[i] = NULL;
 	}
 	free(arr);
-	return (NULL);
+	arr = NULL;
 }
 
 /*
@@ -67,7 +71,7 @@ static void	*free_mem(char **arr, int i)
 ** \details handle leading & trailing delimiting characters - no empty substrings
 ** \details allocated memory freed, no manipulation of input 
 ** \details (edge: empty input, only delimiter, no delimiter: return array input)
-** \details uses helper functions free_mem (free), word_length, word_counter
+** \details uses helper functions free_arr (free), word_length, word_counter
 */
 char	**ft_split(char const *s, char c)
 {
@@ -85,7 +89,7 @@ char	**ft_split(char const *s, char c)
 			arr[i] = ft_substr(s, 0, word_length(s, c));
 			if (!arr[i])
 			{
-				return (free_mem(arr, i));
+				return (free_arr(arr), NULL);
 			}
 			i++;
 			s += word_length(s, c);
