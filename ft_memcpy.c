@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-/*
-** @brief copies data from src pointer to dst pointer
-** @param dst pointer  to array
-** @param src pointer to source
-** @param n bytes to copy
-** @return returns pointer to dst if successful, otherwise NULL
-** @details uses type casting to make comparison possible
-*/
+/**
+ * @brief copies data from src pointer to dst pointer
+ * @param dst pointer  to array
+ * @param src pointer to source
+ * @param n bytes to copy
+ * @return returns pointer to dst if successful, otherwise NULL
+ * @details uses type casting to make comparison possible
+ */
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char			*d;

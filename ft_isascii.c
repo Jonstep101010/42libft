@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** @brief checks if given value is an ascii character
-** @param c value of character
-** @return 1 if true, 0 if not
-** @details includes termination character, includes range from 0 to 127
-*/
+/**
+ * @brief checks if given value is an ascii character*
+ * @param c value of character*
+ * @return 1 if true, 0 if not*
+ * @details includes termination character, includes range from 0 to 127*
+ */
 int	ft_isascii(int c)
 {
 	if ((c >= 0) && (c < 128))

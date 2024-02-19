@@ -12,13 +12,13 @@
 
 #include "libft.h"
 
-/*
-** @brief duplicate a string through memory allocation
-** @param s source string to copy
-** @return pointer to copied string
-** @details strlen, malloc used, guard for NULL,
-** \details termination character and cast for return
-*/
+/**
+ * @brief duplicate a string through memory allocation
+ * @param s source string to copy
+ * @return pointer to copied string
+ * @details strlen, malloc used, guard for NULL,
+ * \details termination character and cast for return
+ */
 char	*ft_strdup(const char *s)
 {
 	char	*copy;
@@ -31,21 +31,3 @@ char	*ft_strdup(const char *s)
 	ft_memcpy(copy, s, size);
 	return (copy);
 }
-
-/*alternative without ft_memcpy*/
-/* char	*ft_strdup(const char *s)
-{
-	char	*copy;
-	size_t	size;
-
-	size = 0;
-	while (s[size] != '\0')
-		size++;
-	size += 1;
-	copy = malloc(size);
-	if (!copy)
-		return (0);
-	while (size-- && (copy))
-		copy[size] = s[size];
-	return (copy);
-} */

@@ -32,15 +32,15 @@ static int	isprefix(char c)
 	return (0);
 }
 
-/*
-** @brief converts numbers in char str to integer
-** @param str items to convert
-** @return integer * notation (-prefix if found)
-** @details only allows for one sign (+ or -) in front of numbers in string
-** \details deals with whitespace
-** \details converts using multiplication by 10, adding value,
-** \details subtracting ascii for '0'
-*/
+/**
+ * @brief converts numbers in char str to integer
+ * @param str items to convert
+ * @return integer * notation (-prefix if found)
+ * @details only allows for one sign (+ or -) in front of numbers in string
+ * \details deals with whitespace
+ * \details converts using multiplication by 10, adding value,
+ * \details subtracting ascii for '0'
+ */
 int	ft_atoi(const char *str)
 {
 	int	notation;

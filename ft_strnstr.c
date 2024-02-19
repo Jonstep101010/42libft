@@ -12,15 +12,15 @@
 
 #include "libft.h"
 
-/*
-** @brief find substring in string
-** @param big string to search
-** @param little substring to find (null-terminated)
-** @param len characters to search
-** @return if little is empty - big, if no occurrence - NULL,
-** \return otherwise return pointer to first character of first occurrence
-** @details characters after '\0' are not searched, result needs to be casted
-*/
+/**
+ * @brief find substring in string
+ * @param big string to search
+ * @param little substring to find (null-terminated)
+ * @param len characters to search
+ * @return if little is empty - big, if no occurrence - NULL,
+ * \return otherwise return pointer to first character of first occurrence
+ * @details characters after '\0' are not searched, result needs to be casted
+ */
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;

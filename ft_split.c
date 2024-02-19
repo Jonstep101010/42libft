@@ -13,66 +13,27 @@
 #include "libft.h"
 
 /*determine how many strings to store*/
-static int	word_counter(char const *s, char c)
-{
-	int	count;
-
-	count = 0;
-	if (!s)
-		return (0);
-	while (*s)
-	{
-		if (*s == c)
-			s++;
-		else
-		{
-			count++;
-			while ((*s != c) && (*s))
-				s++;
-		}
-	}
-	return (count);
-}
+static int	word_counter(char const *s, char c);
 
 /*determine length for each word*/
-static int	word_length(char const *s, char c)
-{
-	int	length;
-
-	length = 0;
-	while ((s[length]) && (s[length] != c))
-		length++;
-	return (length);
-}
+static int	word_length(char const *s, char c);
 
 /*Free memory of 2d arr*/
-static void	free_arr(char **arr)
-{
-	int	i;
+static void	free_arr(char **arr);
 
-	i = -1;
-	while (arr[++i])
-	{
-		free(arr[i]);
-		arr[i] = NULL;
-	}
-	free(arr);
-	arr = NULL;
-}
-
-/*
-** @brief split string by delimiter c
-** @param s string to be split
-** @param c delimiter char
-** @return array of new strings - resulting from split,
-** \return NULL if allocation fails
-** @details allocates memory and returns array of strings (malloc)
-** \details array has to end with a NULL pointer; 
-** \details handle leading & trailing delimiting characters - no empty substrings
-** \details allocated memory freed, no manipulation of input 
-** \details (edge: empty input, only delimiter, no delimiter: return array input)
-** \details uses helper functions free_arr (free), word_length, word_counter
-*/
+/**
+ * @brief split string by delimiter c
+ * @param s string to be split
+ * @param c delimiter char
+ * @return array of new strings - resulting from split,
+ * \return NULL if allocation fails
+ * @details allocates memory and returns array of strings (malloc)
+ * \details array has to end with a NULL pointer;
+ * \details handle leading & trailing delimiters - no empty substrings
+ * \details allocated memory freed, no manipulation of input
+ * \details empty input, only delimiter, no delimiter: input as array
+ * \details uses helper functions free_arr (free), word_length, word_counter
+ */
 char	**ft_split(char const *s, char c)
 {
 	char	**arr;
@@ -98,4 +59,49 @@ char	**ft_split(char const *s, char c)
 			s++;
 	}
 	return (arr);
+}
+
+static int	word_counter(char const *s, char c)
+{
+	int	count;
+
+	count = 0;
+	if (!s)
+		return (0);
+	while (*s)
+	{
+		if (*s == c)
+			s++;
+		else
+		{
+			count++;
+			while ((*s != c) && (*s))
+				s++;
+		}
+	}
+	return (count);
+}
+
+static int	word_length(char const *s, char c)
+{
+	int	length;
+
+	length = 0;
+	while ((s[length]) && (s[length] != c))
+		length++;
+	return (length);
+}
+
+static void	free_arr(char **arr)
+{
+	int	i;
+
+	i = -1;
+	while (arr[++i])
+	{
+		free(arr[i]);
+		arr[i] = NULL;
+	}
+	free(arr);
+	arr = NULL;
 }

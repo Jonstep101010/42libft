@@ -13,12 +13,12 @@
 #include "libft.h"
 #include <stdlib.h>
 
-/*
-** @brief allocate with malloc - content initialized with its value
-** @param content to create node with
-** @return new node, NULL if failure
-** @details next is initialized to NULL
-*/
+/**
+ * @brief allocate with malloc - content initialized with its value
+ * @param content to create node with
+ * @return new node, NULL if failure
+ * @details next is initialized to NULL
+ */
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_node;

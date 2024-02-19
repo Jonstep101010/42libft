@@ -12,26 +12,13 @@
 
 #include "libft.h"
 
-/*
-** @brief places n zero-valued bytes in memory area (*s)
-** @param s pointer to memory
-** @param n number of bytes to place
-** @details works without typecasting
-*/
+/**
+ * @brief places n zero-valued bytes in memory area (*s)
+ * @param s pointer to memory
+ * @param n number of bytes to place
+ * @details works without typecasting
+ */
 void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }
-
-/* void	ft_bzero(void *s, size_t n)
-{
-	unsigned char	*ptr;
-	size_t			i;
-
-	i = 0;
-	ptr = s;
-	while (i < n)
-	{
-		ptr[i++] = 0;
-	}
-} */

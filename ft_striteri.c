@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-/*
-** @brief apply function to chars of string, no return
-** @param s string to iterate over
-** @param f function to apply to chars
-*/
+/**
+ * @brief apply function to chars of string, no return
+ * @param s string to iterate over
+ * @param f function to apply to chars
+ */
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;

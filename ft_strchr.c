@@ -12,13 +12,13 @@
 
 #include "libft.h"
 
-/*
-/// @brief search string for character (starts with first)
-/// @param str string to search
-/// @param c character to find
-/// @return pointer to char c (if found), otherwise 0
-/// @details includes termination character in search
-*/
+/**
+ * @brief find character in string
+ *
+ * @param str string to search
+ * @param c character to find
+ * @return char* pointer to char c (if found), otherwise 0
+ */
 char	*ft_strchr(const char *str, int c)
 {
 	size_t	i;
@@ -27,5 +27,5 @@ char	*ft_strchr(const char *str, int c)
 	while (++i <= ft_strlen(str))
 		if (str[i] == (unsigned char) c)
 			return ((char *)&str[i]);
-	return (0);
+	return (NULL);
 }

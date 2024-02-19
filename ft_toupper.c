@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-/*
-** @brief converts ascii alphabet values to uppercase (ascii value)
-** @param ch value of character
-** @return value, whether modified or not
-*/
+/**
+ * @brief converts ascii alphabet values to uppercase (ascii value)
+ * @param ch value of character
+ * @return value, whether modified or not
+ */
 int	ft_toupper(int ch)
 {
 	if (ch > 96 && ch < 123)

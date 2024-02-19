@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-/*
-** @brief length of a given string including termination character
-** @param str to look at
-** @return length (including \0)
-*/
+/**
+ * @brief length of a given string including termination character
+ * @param str to look at
+ * @return length (including \0)
+ */
 size_t	ft_strlen(const char *str)
 {
 	size_t	i;

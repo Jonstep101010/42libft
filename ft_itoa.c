@@ -12,12 +12,30 @@
 
 #include "libft.h"
 
-/*
-** @brief count number of digits and prefix for malloc
-** @param n long int of int n
-** @return number of chars to assign (without termination)
-** @details makes copy of n, so no interference with while for prefix detection
-*/
+static char		*convert_int(char *s, size_t digits, long int num, int n);
+static size_t	ndigits(long int n);
+
+/**
+ * @brief convert int to char string
+ * @param n int to convert
+ * @return pointer to char string, NULL if allocation fails
+ */
+char	*ft_itoa(int n)
+{
+	size_t		digits;
+	char		*s;
+	long int	num;
+
+	num = n;
+	digits = ndigits(num);
+	s = ft_calloc(sizeof(char), digits + 1);
+	if (!s)
+		return (NULL);
+	if (num < 0)
+		num *= -1;
+	return (convert_int(s, digits, num, n));
+}
+
 static size_t	ndigits(long int n)
 {
 	size_t		digits;
@@ -37,14 +55,6 @@ static size_t	ndigits(long int n)
 	return (digits);
 }
 
-/*
-** @brief convert long int to char str, assign prefix (-) if needed
-** @param s string to assign
-** @param digits numer of characters in string (without terminator)
-** @param num long int (equal to positive integer n)
-** @param n check for prefix assignation
-** @return pointer to string s with termination
-*/
 static char	*convert_int(char *s, size_t digits, long int num, int n)
 {
 	while (digits--)
@@ -55,25 +65,4 @@ static char	*convert_int(char *s, size_t digits, long int num, int n)
 	if (n < 0)
 		*s = '-';
 	return (s);
-}
-
-/*
-** @brief convert int to char string
-** @param n int to convert
-** @return pointer to char string, NULL if allocation fails
-*/
-char	*ft_itoa(int n)
-{
-	size_t		digits;
-	char		*s;
-	long int	num;
-
-	num = n;
-	digits = ndigits(num);
-	s = ft_calloc(sizeof(char), digits + 1);
-	if (!s)
-		return (NULL);
-	if (num < 0)
-		num *= -1;
-	return (convert_int(s, digits, num, n));
 }

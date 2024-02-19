@@ -11,12 +11,13 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-** @brief deletes and frees given node and successors
-** @param lst node to free
-** @param del &function used to delete content
-** @details pointer (list) set to NULL
-*/
+
+/**
+ * @brief deletes and frees given node and successors
+ * @param lst node to free
+ * @param del &function used to delete content
+ * @details pointer (list) set to NULL
+ */
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (lst)

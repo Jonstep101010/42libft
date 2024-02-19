@@ -11,15 +11,14 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <ctype.h>
 
-/*
-** @brief sets first n bytes of str to value c (unsigned int)
-** @param str location to modify
-** @param c value to set n bytes to
-** @param n bytes to set to value c
-** @return value of str
-*/
+/**
+ * @brief sets first n bytes of str to value c (unsigned int)
+ * @param str location to modify
+ * @param c value to set n bytes to
+ * @param n bytes to set to value c
+ * @return value of str
+ */
 void	*ft_memset(void *str, int c, size_t n)
 {
 	size_t			i;

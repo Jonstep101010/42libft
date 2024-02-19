@@ -12,11 +12,12 @@
 
 #include "libft.h"
 
-/*
-/// @brief converts ascii alphabet values to lowercase
-/// @param ch value of character
-/// @return value, whether modified or not
-*/
+/**
+ * @brief converts ascii alphabet values to lowercase
+ *
+ * @param ch value of character
+ * @return value, whether modified or not
+ */
 int	ft_tolower(int ch)
 {
 	if ((ch > 64) && (ch < 91))

@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-/*
-** @brief allocates and returns new string, concatenation s1 and s2
-** @param s1 prefix string
-** @param s2 suffix string
-** @return new string, NULL if allocation fails
-*/
+/**
+ * @brief allocates and returns new string, concatenation s1 and s2
+ * @param s1 prefix string
+ * @param s2 suffix string
+ * @return new string, NULL if allocation fails
+ */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*strcat;
@@ -32,20 +32,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcpy(strcat, s1, s1_len + 1);
 	return (ft_strlcat(strcat, s2, s1_len + s2_len + 1), strcat);
 }
-
-/*implementation without ft_strlcpy/ft_strlcat*/
-/* char	*ft_strjoin(char const *s1, char const *s2)
-{
-	char	*copy;
-	char	*p;
-
-	copy = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (!copy || !s1 || !s2)
-		return (NULL);
-	p = copy;
-	while (*s1)
-		*p++ = *s1++;
-	while (*s2)
-		*p++ = *s2++;
-	return (*p = '\0', copy);
-} */
