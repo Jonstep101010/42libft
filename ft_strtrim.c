@@ -12,17 +12,17 @@
 
 #include "libft.h"
 
-/*
-** @brief copies with set removed from beginning and end of string
-** @param s string to trim
-** @param set reference set of characters to trim
-** @return trimmed string, NULL if allocation fails
-** @details allocates with malloc, after checking for empty strings;
-** \details searching string for set of characters (while for beginning and end)
-** \details ft_strlen to iterate from last, substr to cut to variables,
-** \details guard for return;
-** \details Example: set = "He", s = "HeHello, HeyHe" trim = "llo, Hey"
-*/
+/**
+ * @brief copies with set removed from beginning and end of string
+ * @param s string to trim
+ * @param set reference set of characters to trim
+ * @return trimmed string, NULL if allocation fails
+ * @details allocates with malloc, after checking for empty strings;
+ * \details searching string for set of characters (while for beginning and end)
+ * \details ft_strlen to iterate from last, substr to cut to variables,
+ * \details guard for return;
+ * \details Example: set = "He", s = "HeHello, HeyHe" trim = "llo, Hey"
+ */
 char	*ft_strtrim(char const *s, char const *set)
 {
 	char	*trim;

@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-/*
-** @brief scan initial n bytes of memory for char c
-** @param ptr memory location to be scanned
-** @param c character to search for
-** @param n bytesize
-** @details casts to unsigned char for comparison with c
-** @return pointer to matching byte, NULL if not found
-*/
+/**
+ * @brief scan initial n bytes of memory for char c
+ * @param ptr memory location to be scanned
+ * @param c character to search for
+ * @param n bytesize
+ * @details casts to unsigned char for comparison with c
+ * @return pointer to matching byte, NULL if not found
+ */
 void	*ft_memchr(const void *ptr, int c, size_t n)
 {
 	const unsigned char	*cast;

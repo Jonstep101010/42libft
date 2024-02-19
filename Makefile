@@ -3,7 +3,7 @@ NAME	:= libft.a
 
 # Compiler settings
 CC		:= cc
-CFLAGS	:= -Wall -Wextra -Werror
+CFLAGS	:= -Wall -Wextra -Werror -Wpedantic
 
 # Archiver
 AR		:= ar -rcs
@@ -57,16 +57,6 @@ clean:
 # Clean up all generated files
 fclean: clean
 	$(RM) $(RMFLAGS) $(NAME)
-
-# Clean up object files and test files
-tclean: clean
-	$(RM) $(RMFLAGS) a.out
-	$(RM) $(RMFLAGS) $(TESTFILE:.c=.o)
-
-# Build and run test file
-test: $(NAME) $(TESTFILE:.c=.o)
-	$(CC) $(CFLAGS) -o ./a.out $(TESTFILE:.c=.o) $(NAME)
-	./a.out
 
 # Clean and build all
 re: fclean all

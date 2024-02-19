@@ -10,11 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-/// @brief checks if given value is a printable character (32 to 126)
-/// @param c value of character to check
-/// @return 1 if true, 0 if not
-*/
+/**
+ * @brief checks if given value is a printable character (32 to 126)
+ *
+ * @param c to check
+ * @return int 1 if true, 0 if not
+ */
 int	ft_isprint(int c)
 {
 	if ((c > 31) && (c < 127))

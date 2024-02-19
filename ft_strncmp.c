@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-/*
-** @brief compare strings
-** @param s1 first string to compare
-** @param s2 second string to compare
-** @param n maximum characters to compare
-** @return s1 less, greater or equal s2
-** @details compares at most the first n bytes of s1 and s2
-*/
+/**
+ * @brief compare strings
+ * @param s1 first string to compare
+ * @param s2 second string to compare
+ * @param n maximum characters to compare
+ * @return s1 less, greater or equal s2
+ * @details compares at most the first n bytes of s1 and s2
+ */
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned char	*ps1;

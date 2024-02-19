@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-/*
-** @brief iterate over lst and apply function on content of nodes
-** @param lst &pointer to node 
-** @param f &function used to iterate over list
-*/
+/**
+ * @brief iterate over lst and apply function on content of nodes
+ * @param lst &pointer to node
+ * @param f &function used to iterate over list
+ */
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst)

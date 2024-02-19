@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-/*
-** @brief output int n to file descriptor
-** @param n int to output
-** @param fd file descriptor on which to write
-*/
+/**
+ * @brief output int n to file descriptor
+ * @param n int to output
+ * @param fd file descriptor on which to write
+ */
 void	ft_putnbr_fd(int n, int fd)
 {
 	char	*nbrs;
@@ -24,7 +24,8 @@ void	ft_putnbr_fd(int n, int fd)
 	nbrs = "0123456789";
 	if (n == -2147483648)
 	{
-		return (ft_putstr_fd("-2147483648", fd));
+		ft_putstr_fd("-2147483648", fd);
+		return ;
 	}
 	if (n < 0)
 	{

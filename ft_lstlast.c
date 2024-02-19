@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-/* 
-** @brief returns last node (list)
-** @param lst beginning (list)
-** @return last node (list)
-*/
+/**
+ * @brief returns last node (list)
+ * @param lst beginning (list)
+ * @return last node (list)
+ */
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)

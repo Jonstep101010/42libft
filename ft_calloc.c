@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-/* 
-** @brief allocates and points to memory
-** @param nitems number of elements to allocate
-** @param size size of elements
-** @return pointer to allocated memory, NULL if failure (1, for byte possible)
-** @details ptr for memory space, iterating through and initializing,
-** \details allocate using malloc, guarding for ptr being 0,
-*/
+/**
+ * @brief allocates and points to memory
+ * @param nitems number of elements to allocate
+ * @param size size of elements
+ * @return pointer to allocated memory, NULL if failure (1, for byte possible)
+ * @details ptr for memory space, iterating through and initializing,
+ * \details allocate using malloc, guarding for ptr being 0,
+ */
 void	*ft_calloc(size_t nitems, size_t size)
 {
 	void	*ptr;

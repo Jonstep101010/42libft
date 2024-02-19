@@ -11,14 +11,13 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <ctype.h>
 
-/*
-** @brief adds node new at end of list
-** @param lst &pointer to first lik of a list
-** @param new &pointer for node to add
-** @details calls ft_lstlast for finding last value
-*/
+/**
+ * @brief adds node new at end of list
+ * @param lst &pointer to first lik of a list
+ * @param new &pointer for node to add
+ * @details calls ft_lstlast for finding last value
+ */
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	if (!*lst)

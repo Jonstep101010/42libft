@@ -12,13 +12,13 @@
 
 #include "libft.h"
 
-/*
-** @brief locate last ocurrence of char c (cast)
-** @param str string to search
-** @param c value of character to find
-** @return pointer to location of character, NULL if no ocurrence found
-** @details includes terminating \0
-*/
+/**
+ * @brief locate last ocurrence of char c (cast)
+ * @param str string to search
+ * @param c value of character to find
+ * @return pointer to location of character, NULL if no ocurrence found
+ * @details includes terminating \0
+ */
 char	*ft_strrchr(const char *str, int c)
 {
 	char	*ptr;

@@ -12,15 +12,15 @@
 
 #include "libft.h"
 
-/* 
-** @brief copy src to dst of size
-** @param dst pointer to string
-** @param src pointer to string
-** @param size size of destination buffer
-** @return length of src, if return > size, terminate dst
-** @details at most copy size-1
-** \details terminates unless size == 0 
-*/
+/**
+ * @brief copy src to dst of size
+ * @param dst pointer to string
+ * @param src pointer to string
+ * @param size size of destination buffer
+ * @return length of src, if return > size, terminate dst
+ * @details at most copy size-1
+ * \details terminates unless size == 0
+ */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	srclen;

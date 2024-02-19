@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-/*
-** @brief iterates list and applies f on content
-** use void * to pass to del function on failure
-** @param lst to be iterated over, function applied and copy returned
-** @param (*f) to apply to contents of lst
-** @param (*del) function used to delete, if necessary
-** @return list (copy), NULL if allocation fails
-*/
+/**
+ * @brief iterates list and applies f on content
+ * use void * to pass to del function on failure
+ * @param lst to be iterated over, function applied and copy returned
+ * @param (*f) to apply to contents of lst
+ * @param (*del) function used to delete, if necessary
+ * @return list (copy), NULL if allocation fails
+ */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*list;

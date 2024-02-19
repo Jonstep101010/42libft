@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** @brief checks if given value is alphabetic (ascii table)
-** @param c value of input character
-** @return 1 if true, 0 if not
-*/
+/**
+ * @brief checks if given value is alphabetic (ascii table)
+ * @param c value of input character
+ * @return 1 if true, 0 if not
+ */
 int	ft_isalpha(int c)
 {
 	if (((c > 64) && (c < 91)) || ((c > 96) && (c < 123)))

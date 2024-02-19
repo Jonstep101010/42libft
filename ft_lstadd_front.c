@@ -12,13 +12,13 @@
 
 #include "libft.h"
 
-/* 
-** @brief adds node new at beginning of list
-** @param lst &(ptr) first link in list
-** @param new &(ptr) node to add
-** @details new node is set to new head
-** \details next is set to new node, pointer updated to new node
-*/
+/**
+ * @brief adds node new at beginning of list
+ * @param lst &(ptr) first link in list
+ * @param new &(ptr) node to add
+ * @details new node is set to new head
+ * \details next is set to new node, pointer updated to new node
+ */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (new && lst)

@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-/*
-** @brief iterate function over characters of string, return applied copy
-** @param s string to iterate on
-** @param f function to apply to each char
-** @return string created from application of f, NULL if allocation fails
-*/
+/**
+ * @brief iterate function over characters of string, return applied copy
+ * @param s string to iterate on
+ * @param f function to apply to each char
+ * @return string created from application of f, NULL if allocation fails
+ */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*cpy;
