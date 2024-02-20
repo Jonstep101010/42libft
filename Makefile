@@ -42,7 +42,7 @@ $(NAME): $(OBJS)
 
 # Clean up object files
 clean:
-	$(RM) $(RMFLAGS) $(OBJS) $(B_OBJS)
+	$(RM) $(RMFLAGS) $(OBJS)
 
 # Clean up all generated files
 fclean: clean
