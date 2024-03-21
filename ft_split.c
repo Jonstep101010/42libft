@@ -6,20 +6,20 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 10:06:22 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/05/30 20:04:54 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/03/28 08:25:56 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*determine how many strings to store*/
-static int	word_counter(char const *s, char c);
+static size_t	word_counter(char const *s, char c);
 
 /*determine length for each word*/
-static int	word_length(char const *s, char c);
+static int		word_length(char const *s, char c);
 
 /*Free memory of 2d arr*/
-static void	free_arr(char **arr);
+static void		free_arr(char **arr);
 
 /**
  * @brief split string by delimiter c
@@ -40,8 +40,10 @@ char	**ft_split(char const *s, char c)
 	int		i;
 
 	i = 0;
-	arr = ft_calloc(sizeof(char *), (word_counter(s, c) + 1));
-	if ((!arr) || (!s))
+	if (!s)
+		return (NULL);
+	arr = ft_calloc(sizeof(char *), word_counter(s, c) + 1);
+	if (!arr)
 		return (NULL);
 	while (*s)
 	{
@@ -61,9 +63,9 @@ char	**ft_split(char const *s, char c)
 	return (arr);
 }
 
-static int	word_counter(char const *s, char c)
+static size_t	word_counter(char const *s, char c)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
 	if (!s)
